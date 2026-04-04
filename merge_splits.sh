@@ -21,7 +21,7 @@ if [ ! -f "$base.hash" ]; then
     continue
 fi
 
-sha256sum -c "$base.hash" > /dev/null 2>&1
+(cd "$(dirname "$base")" && sha256sum -c "$(basename "$base").hash") > /dev/null 2>&1
 if [ $? -ne 0 ]; then
     echo "[✗] Corrupt/missing parts: $base"
     skipped=$((skipped+1))
