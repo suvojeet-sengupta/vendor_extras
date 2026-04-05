@@ -2,20 +2,12 @@ android_app_import {
     name: "SGCam",
     apk: "apps/SGC.apk",
     presigned: true,
-    privileged: true,
     preprocessed: true,
     skip_preprocessed_apk_checks: true,
     dex_preopt: {
         enabled: false,
     },
     overrides: ["Aperture"],
-    product_specific: true,
-}
-
-prebuilt_etc {
-    name: "privapp-permissions-SGCam",
-    src: "configs/privapp-permissions-SGCam.xml",
-    sub_dir: "permissions",
     product_specific: true,
 }
 

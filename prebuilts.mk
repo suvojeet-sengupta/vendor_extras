@@ -3,8 +3,7 @@ PRODUCT_SOONG_NAMESPACES += external/vanadium
 
 ifeq ($(SGC),true)
 PRODUCT_PACKAGES += \
-    SGCam \
-    privapp-permissions-SGCam
+    SGCam
 endif
 
 ifeq ($(SUVM),true)
